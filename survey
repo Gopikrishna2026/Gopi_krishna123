@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #1d96f2;
+            color: #cdf2fa;
+            display: grid;
+            place-items: center;
+            padding-top: 20px;
+        }
+
+        .heading {
+            font-family: "Roboto";
+            text-align: center;
+        }
+
+        .background-container {
+            background-color: #ffffff;
+            color: black;
+            padding: 15px;
+        }
+
+        .input-bar {
+            height: 30px;
+            width: 240px;
+            margin-right: 10px;
+        }
+
+        .suggestion-box {
+            height: 80px;
+            width: 100%;
+        }
+
+        .button {
+            height: 30px;
+            width: 100px;
+            color: #cdf2fa;
+            background-color: #1d96f2;
+            border: 0;
+        }
+
+        .span-item {
+            color: #1c1e73;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Customer Survey Form</h1>
+    <div class="background-container">
+        <form>
+            <div class="d-flex flex-row justify-content-start">
+                <div class="">
+                    <label>Full Name</label><br />
+                    <input type="text" class="input-bar" name="Fullname" />
+                </div>
+                <div>
+                    <label>Email</label><br />
+                    <input type="email" class="input-bar" name="Email" />
+                </div>
+            </div>
+            <br />
+            <label>Is this the first time you are using our products & service?</label>
+            <br />
+            <input type="radio" value="Yes" name="selection" /> Yes
+            <input type="radio" value="No" name="selection" /> No
+            <br />
+            <label>Would you suggest us to your friends and colleagues?</label>
+            <br />
+            <input type="radio" value="Yes" name="suggestion" /> Yes
+            <input type="radio" value="No" name="suggestion" /> No
+            <br />
+            <label>How satisfied are you with our company overall?</label>
+            <br />
+            <input type="radio" value="satisfied" name="opinion" /> Satisfied
+            <input type="radio" value="undecided" name="opinion" /> Undecided
+            <input type="radio" value="unsatisfied" name="opinion" /> Unsatisfied
+            <br />
+            <label>Do you have suggestions to improve our service?</label>
+            <textarea name="textarea" class="suggestion-box"></textarea>
+            <br /><br />
+            <button class="button">SUBMIT</button>
+        </form>
+    </div>
+    &#169; 2018 Customer Survey Form. All Rights Reserved | Design by <span class="span-item">W3Layouts</span>
+</body>
+
+</html>
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #c6c8cc;
+            display: grid;
+            place-items: center;
+            padding-top: 50px;
+        }
+
+        .input-bar {
+            height: 60px;
+            width: 225px;
+            border: 0;
+            font-family: "Roboto";
+            font-size: 26px;
+        }
+
+        .button {
+            height: 60px;
+            width: 75px;
+            color: white;
+            background-color: #1a1c1a;
+            text-align: center;
+            border: 0;
+        }
+
+        .clear-button {
+            background-color: #4ec299;
+        }
+
+        .operator_button {
+            background-color: #696e6a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <form>
+            <div class="d-flex flex-row justify-content-start">
+                <input type="text" name="display" placeholder="0" class="input-bar" id="display" />
+                <input type="button" value="AC" class="button clear-button" onclick="clearDisplay()" />
+            </div>
+            <div class="d-flex flex-row justify-content-start">
+                <input type="button" value="9" class="button" onclick="appendValue('9')" />
+                <input type="button" value="8" class="button" onclick="appendValue('8')" />
+                <input type="button" value="7" class="button" onclick="appendValue('7')" />
+                <input type="button" value="+" class="button operator_button" onclick="appendOperator('+' )" />
+            </div>
+            <div class="d-flex flex-row justify-content-start">
+                <input type="button" value="4" class="button" onclick="appendValue('4')" />
+                <input type="button" value="5" class="button" onclick="appendValue('5')" />
+                <input type="button" value="6" class="button" onclick="appendValue('6')" />
+                <input type="button" value="-" class="button operator_button" onclick="appendOperator('-')" />
+            </div>
+            <div class="d-flex flex-row justify-content-start">
+                <input type="button" value="1" class="button" onclick="appendValue('1')" />
+                <input type="button" value="2" class="button" onclick="appendValue('2')" />
+                <input type="button" value="3" class="button" onclick="appendValue('3')" />
+                <input type="button" value="/" class="button operator_button" onclick="appendOperator('/')" />
+            </div>
+            <div class="d-flex flex-row justify-content-start">
+                <input type="button" value="." class="button" onclick="appendValue('.')" />
+                <input type="button" value="0" class="button" onclick="appendValue('0')" />
+                <input type="button" value="=" class="button" onclick="calculateResult()" />
+                <input type="button" value="*" class="button operator_button" onclick="appendOperator('*')" />
+            </div>
+        </form>
+    </div>
+    <script>
+        let display = document.getElementById("display");
+
+        function appendValue(value) {
+            display.value += value;
+        }
+
+        function appendOperator(operator) {
+            display.value += operator;
+        }
+
+        function clearDisplay() {
+            display.value = '';
+        }
+
+        function calculateResult() {
+            try {
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+</body>
+
+</html>
+

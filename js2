@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="array"></div>
+    <script>
+        const numbers = [4, 7, 1, 9, 2, 6, 8, 3, 5];
+        numbers.sort(function(a, b) {
+            return b - a;
+        });
+     document.getElementById("array").innerHTML = numbers.join(", ");
+    </script>
+</body>
+</html>
+
